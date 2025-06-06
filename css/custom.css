@@ -1,0 +1,420 @@
+body {
+  margin: 0;
+  padding: 0;
+  /*font-family: Arial, sans-serif;*/
+  font-family: Times New Roman;
+  color: #333;
+  background: transparent;
+  /*display: flex;*/
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+
+/* 顶部导航栏整体样式 */
+#top-nav {
+  position: fixed;  /* 固定定位 */
+  top: 0;           /* 距离顶部 0 */
+  left: 0;          /* 左边对齐 */
+  width: 100%;
+  height: auto;  /* 导航高度 */
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;    /* 保证在其他元素之上 */
+  background: white; /* 固定时最好加背景色，防止内容透过 transparent*/
+}
+
+#top-nav .nav-container {
+  padding: 8px 20px;
+}
+
+/* 确保所有锚点跳转标题不会被 fixed 导航遮住 */
+h1[id], h2[id], h3[id], section[id], div[id] {
+  scroll-margin-top: 60px;
+}
+
+/* 导航栏和标题圆润字体 */
+#top-nav, .nav-container,
+h1, .profile-name, .profile-subtitle {
+  font-family: "Arial Rounded MT Bold", "Segoe UI", Arial, sans-serif;
+}
+
+#top-nav .nav-container {
+  max-width: 1200px;
+  margin: 0px auto 0px auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#top-nav .nav-left .home-link {
+  color: #555;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin-left: -25px;
+  font-weight: bold;
+}
+
+#top-nav .nav-right a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95em;
+  font-weight: 650;
+  margin-left: 40px;
+  margin-right: 13px;
+}
+
+#top-nav .nav-right a:hover {
+  color: #4682b4;
+}
+
+
+/* 主体布局容器 */
+#container {
+  display: flex;
+  max-width: 1250px;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  margin: 15px auto 0px auto;
+  min-height: calc(100vh - 80px);
+  background: transparent;
+  position: relative;  /* 新增：定位参考 */
+}
+
+#sidebar {
+  position: fixed;
+  top: 45px; /* 导航栏高度 */
+  align-self: flex-start; /* 避免拉伸 */
+  width: 250px; /* 可以用百分比或者 max-width */
+  max-width: 500vw; /* 最大宽度限制 */
+  height: auto;
+  overflow-y: auto;
+  padding: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  margin-left: -20px;
+}
+
+/* Sidebar 内容整体样式 */
+#sidebar-content {
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 头像 */
+.profile-pic img {
+  width: 150px;
+  height: 180px;
+  /* border-radius: 50%; */
+  object-fit: cover;
+  border: none;  /* 取消边框 */
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+.profile-name, .profile-subtitle {
+  text-align: center !important;
+  margin: 0 auto;
+}
+
+/* 姓名 */
+.profile-name {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* 副标题 */
+.profile-subtitle {
+  font-size: 1em;
+  color: #777;
+  margin-bottom: 20px;
+  /* font-style: italic; */
+}
+
+/* 联系方式和图标链接 */
+.contact-info i,
+.social-links i {
+  margin-right: 8px;
+  color: #888;
+  width: 18px;
+  text-align: center;
+}
+
+/* 每一行信息 */
+.contact-info div,
+.social-links div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+  padding-left: 10px;
+}
+
+/* 链接颜色和悬停效果 */
+.contact-info a,
+.social-links a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.contact-info a:hover,
+.social-links a:hover {
+  color: #1e90ff;
+}
+
+.social-links .icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  flex-shrink: 0;  /* 防止图标缩小 */
+}
+
+/* 右侧主要内容区 */
+#main-content {
+  padding: 40px 50px;
+  flex-grow: 1;
+  min-height: 300vh;  /* 或 calc(100vh - 导航栏高度) */
+  max-width: 950px; 
+  margin-left: 200px; 
+  margin-right: 10px;
+}
+
+#main-content p {
+  /* margin-top: 0; */
+  margin-bottom: 2em; 
+  line-height: 1.4;
+}
+
+#publications {
+  padding: 40px 50px;
+  max-width: 950px;
+  width: 100%;
+  flex-grow: 1;
+  min-height: 300vh;  /* 或 calc(100vh - 导航栏高度) */
+  margin-left: -60px;  /* 跟主页右侧内容保持一致 */
+  margin-right: 5px;
+  line-height: 1.4;
+  margin-top: 0 !important;
+  padding-top: 0px !important;
+}
+
+/* 调整首页主标题字体大小 */
+h1 {
+  font-size: 1.3em;      /* 原来可能是 2.5em，过大 */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+  margin-top: 0px;
+  text-align: justify;
+  position: relative;
+}
+
+
+/* 调整首页次级标题字体大小 */
+h2 {
+  font-size: 1em;
+}
+
+/* 如果有特定类名，比如 */
+.title, .page-title {
+  font-size: 2em;
+}
+
+/* 所有标题（h1, h2, h3）下方加灰色横线 */
+h1, h2, h3 {
+  border-bottom: 1px solid #ddd;  /* 灰色横线 */
+  font-weight: 700;      /* 中等粗细，不会太粗 */
+  color: #333;           /* 深灰色，避免纯黑突兀 */
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h2 {
+  font-size: 1em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  margin-top: 30px;
+  text-align: justify;
+}
+
+h3 {
+  font-size: 0.8em;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* 正文文字左右两端对齐 */
+p, li, div {
+  text-align: justify;
+}
+
+/* 所有链接设为浅蓝色，并取消下划线 */
+a {
+  text-decoration: none;
+  color: #6495ed;  /* 蓝色 #6495ed #5f9ea0 #8470ff #003262 #191970 #002147 #003366 #6a5acd #4682b4*/
+}
+
+/* 链接悬停效果 */
+a:hover {
+  color: #0d6efd; /* 更深一点的蓝色 */
+  text-decoration: underline;     /* 可选：悬停时加下划线 */
+}
+
+
+#footer-time {
+  position: absolute;  
+  bottom: 10px;    /* 调整为离底部更近 */
+  right: 40px;
+  font-size: 0.85em;
+  color: #666;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 6px 12px;
+  border-radius: 6px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+
+#toggle-news-btn {
+  font-family: "Arial Rounded MT Bold", "Segoe UI", Arial, sans-serif;
+  font-weight: 500; 
+  color: #6495ed;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85em;
+  /* 右对齐 */
+  display: block;
+  margin-left: auto;
+}
+
+#news-list,
+#experience-list {
+  list-style: none;        /* 取消浏览器默认圆点 */
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* 强制取消li默认样式 */
+#news-list li,
+#experience-list li {
+  list-style: none;
+  position: relative; /* 为了使用伪元素绝对定位 */
+  padding-left: 1.5em; /* 给文字留出圆点位置的空间 */
+  margin-bottom: 0.2em; /* 行间距 */
+  text-align: left; /* 确保左对齐 */
+}
+
+#news-list li::before,
+#experience-list li::before {
+  content: "•";
+  display: inline-block;
+  width: 0.8em;
+  margin-right: 0.5em;
+}
+
+.pub-header {
+  text-align: center;
+  margin-top: 0;
+  font-family: "Arial Rounded MT Bold", "Segoe UI", Arial, sans-serif;
+}
+
+.pub-header .title {
+  font-size: 1.4em;
+  font-weight: 700;  
+  color: #333;
+}
+
+.pub-header .sub {
+  font-size: 0.95em;
+  color: #777;
+  font-weight: 600;  
+  margin-left: 5px;
+}
+
+.hidden-content {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background: #f7f7f7;
+  border-left: 4px solid #ccc;
+  white-space: pre-wrap;
+  font-size: 0.9em;
+  font-family: "Courier New", monospace;
+}
+
+#journal-list {
+  counter-reset: pub;
+}
+
+#journal-list li {
+  counter-increment: pub;
+  margin-bottom: 0.5em;
+}
+
+
+.title {
+  font-family: "Arial Rounded MT Bold", sans-serif;
+  font-weight: bold;
+  font-size: 1.05em;  
+  /*margin-bottom: 5px;*/
+}
+
+.small-text {
+  font-size: 1em; /* 或 14px、13px，看你需要多小 */
+}
+
+.green-text {
+  color: #228B22; /* ForestGreen，可根据需要调整为其他绿色 #3CB371 #228B22 #32CD32 */
+}
+
+.my-footer {
+  width: 100%;
+  background-color: #f0f0f0;
+  color: black;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  z-index: 999;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* 左右分布 */
+  align-items: center;            /* 垂直居中 */
+  padding: 0 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.footer-center {
+  text-align: center;
+  flex: 1;
+  font-size: 0.9em;
+}
+
+.footer-right a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.95em;
+  background-color: rgba(128, 128, 128, 0.2);
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-right a:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+  text-decoration: underline;
+}

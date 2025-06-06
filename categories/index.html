@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Categories - Qian Yin&#39;s Homepage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+
+  
+  <nav id="top-nav">
+  <div class="nav-container">
+    <div class="nav-left">
+      <a href="/" class="home-link">Yin Qian's Homepage</a>
+    </div>
+    <div class="nav-right">
+      
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#news">News</a>
+        <a href="/publications">Publications</a>
+        <a href="#contact">Contact</a>
+      
+    </div>
+  </div>
+</nav>
+
+  
+  <div id="container">
+    
+    <aside id="sidebar">
+      <div id="sidebar-content" style="text-align: center;">
+
+  <div class="profile-pic">
+    <img src="/images/QianYin.jpg" alt="Qian Yin" />
+  </div>
+
+  <div class="profile-name">Qian Yin</div>
+
+  <div class="profile-subtitle">
+    A PhD candidate in computer application technology
+  </div>
+
+  <div class="contact-info">
+    <div><i class="fas fa-map-marker-alt"></i> Beijing, China</div>
+    <div><i class="fas fa-university"></i> Peking University</div>
+    <div><i class="fas fa-envelope"></i> <a href="mailto:yinqian_xixi@163.com">yinqian_xixi@163.com</a></div>
+  </div>
+
+  <div class="social-links">
+    <div><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=Q4e8ZvAAAAAJ&hl=zh-CN" target="_blank">Google Scholar</a></div>
+    <div>
+		<img src="/icons/orcid.svg" alt="ORCID" class="icon" />
+		<a href="https://orcid.org/0000-0002-9448-1639" target="_blank" rel="noopener">ORCID</a>
+	</div>
+    <div><i class="fab fa-researchgate"></i> <a href="https://www.researchgate.net/profile/Qian-Yin-26" target="_blank">ResearchGate</a></div>
+    <div><i class="fas fa-database"></i> <a href="http://www.scopus.com/inward/authorDetails.url?authorID=57225732288&partnerID=MN8TOARS" target="_blank">Scopus</a></div>
+    <div><i class="fas fa-code"></i> <a href="https://dblp.org/pid/46/758-2.html" target="_blank">DBLP</a></div>
+  </div>
+
+</div>
+
+    </aside>
+
+    
+    <main id="main-content">
+      
+  <h1>Categories</h1>
+  
+  
+
+    </main>
+	
+  </div>
+  
+  <footer class="my-footer">
+<div class="footer-container">
+  <div class="footer-center">
+      &copy; 2025 Template created by <strong>Qian Yin</strong>.
+  </div>
+  <div class="footer-right">
+      
+        <a href="/" class="home-link"><strong>Top</strong></a>
+      
+  </div>
+ </div>
+</footer>
+
+
+  
+  
+  <script>
+	function updateTime() {
+	const now = new Date();
+
+	const weekdays_en = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+	const dayIndex = now.getDay();
+
+	
+	const options = { year: 'numeric', month: 'long', day: 'numeric' };
+	const dateStr = now.toLocaleDateString('en-US', options);
+
+	
+	const timeStr = now.toLocaleTimeString('en-GB', { hour12: false });
+
+	
+	const fullStr = `${dateStr} ${timeStr} ${weekdays_en[dayIndex]}`;
+
+	document.getElementById('footer-time').textContent = fullStr;
+	}
+
+	updateTime();
+	setInterval(updateTime, 1000);
+  </script>
+  
+  <style>
+  .number {
+    font-family: 'Sitka Text';
+  }
+</style>
+
+<script>
+  
+  function wrapNumbers(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      
+      const replacedText = node.textContent.replace(/(\d+)/g, '<span class="number">$1</span>');
+      if (replacedText !== node.textContent) {
+        const span = document.createElement('span');
+        span.innerHTML = replacedText;
+        node.parentNode.replaceChild(span, node);
+      }
+    } else {
+      node.childNodes.forEach(child => wrapNumbers(child));
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    wrapNumbers(document.body);
+  });
+</script>
+
+<script>
+function toggleContent(id) {
+  const el = document.getElementById(id);
+  if (el.style.display === "block") {
+    el.style.display = "none";
+  } else {
+    el.style.display = "block";
+  }
+}
+</script>
+
+</body>
+
+
+</html>
