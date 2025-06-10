@@ -584,9 +584,17 @@ doi={10.1109/TCSVT.2022.3145513}
         <a href="#" onclick="toggleContent('bibc9'); return false;">BibTeX</a>
       </div>
       <div id="absc9" class="hidden-content">
-Traditional point cloud compression (PCC) methods are not effective at extremely low bit rate scenarios because of the uniform quantization. Although learning-based PCC approaches can achieve superior compression performance, they need to train multiple models for different bit rate, which greatly increases the training complexity and memory storage. To tackle these challenges, a novel FoldingNet-based Point Cloud Geometry Compression (FN-PCGC) framework is proposed in this paper. Firstly, the point cloud is divided into several descriptions by a Multiple-Description Generation (MDG) module. Then a point-based Auto-Encoder with the Multi-scale Feature Extraction (MFE) is introduced to compress all the descriptions. Experimental results show that the proposed method outperforms the MPEG G-PCC and Draco with about 30% ~ 80% gain on average.
+<strong>Abstract</strong> Traditional point cloud compression (PCC) methods are not effective at extremely low bit rate scenarios because of the uniform quantization. Although learning-based PCC approaches can achieve superior compression performance, they need to train multiple models for different bit rate, which greatly increases the training complexity and memory storage. To tackle these challenges, a novel FoldingNet-based Point Cloud Geometry Compression (FN-PCGC) framework is proposed in this paper. Firstly, the point cloud is divided into several descriptions by a Multiple-Description Generation (MDG) module. Then a point-based Auto-Encoder with the Multi-scale Feature Extraction (MFE) is introduced to compress all the descriptions. Experimental results show that the proposed method outperforms the MPEG G-PCC and Draco with about 30% ~ 80% gain on average.
       </div>
       <pre id="bibc9" class="hidden-content">
+@INPROCEEDINGS{9859339,
+  author={Ma, Xiaoqi and Yin, Qian and Zhang, Xinfeng and Tang, Lv},
+  booktitle={2022 IEEE International Conference on Multimedia and Expo Workshops (ICMEW)}, 
+  title={Foldingnet-Based Geometry Compression of Point Cloud with Multi Descriptions}, 
+  year={2022},
+  pages={1-6},
+  doi={10.1109/ICMEW56448.2022.9859339}
+}
 
       </pre>
     </li>
@@ -609,9 +617,17 @@ Traditional point cloud compression (PCC) methods are not effective at extremely
         <a href="#" onclick="toggleContent('bibc10'); return false;">BibTeX</a>
       </div>
       <div id="absc10" class="hidden-content">
-LiDAR point cloud frame interpolation, which synthesizes the intermediate frame between the captured frames, has emerged as an important issue for many applications. Especially for reducing the amounts of point cloud transmission, it is by predicting the intermediate frame based on the reference frames to upsample data to high frame rate ones. However, due to high-dimensional and sparse characteristics of point clouds, it is more difficult to predict the intermediate frame for LiDAR point clouds than videos. In this paper, we propose a novel LiDAR point cloud frame interpolation method, which exploits range images (RIs) as an intermediate representation with CNNs to conduct the frame interpolation process. Considering the inherited characteristics of RIs differ from that of color images, we introduce spatially adaptive convolutions to extract range features adaptively, while a high-efficient flow estimation method is presented to generate optical flows. The proposed model then warps the input frames and range features, based on the optical flows to synthesize the interpolated frame. Extensive experiments on the KITTI dataset have clearly demonstrated that our method consistently achieves superior frame interpolation results with better perceptual quality to that of using state-of-the-art video frame interpolation methods. The proposed method could be integrated into any LiDAR point cloud compression systems for inter prediction.
+<strong>Abstract</strong> LiDAR point cloud frame interpolation, which synthesizes the intermediate frame between the captured frames, has emerged as an important issue for many applications. Especially for reducing the amounts of point cloud transmission, it is by predicting the intermediate frame based on the reference frames to upsample data to high frame rate ones. However, due to high-dimensional and sparse characteristics of point clouds, it is more difficult to predict the intermediate frame for LiDAR point clouds than videos. In this paper, we propose a novel LiDAR point cloud frame interpolation method, which exploits range images (RIs) as an intermediate representation with CNNs to conduct the frame interpolation process. Considering the inherited characteristics of RIs differ from that of color images, we introduce spatially adaptive convolutions to extract range features adaptively, while a high-efficient flow estimation method is presented to generate optical flows. The proposed model then warps the input frames and range features, based on the optical flows to synthesize the interpolated frame. Extensive experiments on the KITTI dataset have clearly demonstrated that our method consistently achieves superior frame interpolation results with better perceptual quality to that of using state-of-the-art video frame interpolation methods. The proposed method could be integrated into any LiDAR point cloud compression systems for inter prediction.
       </div>
       <pre id="bibc10" class="hidden-content">
+@INPROCEEDINGS{9547131,
+  author={Zhao, Lili and Zhu, Zezhi and Lin, Xuhu and Guo, Xuezhou and Yin, Qian and Wang, Wenyi and Chen, Jianwen},
+  booktitle={2021 IEEE International Symposium on Broadband Multimedia Systems and Broadcasting (BMSB)}, 
+  title={RAI-Net: Range-Adaptive LiDAR Point Cloud Frame Interpolation Network}, 
+  year={2021},
+  pages={1-6},
+  doi={10.1109/BMSB53066.2021.9547131}
+}
 
       </pre>
     </li>
@@ -634,9 +650,17 @@ LiDAR point cloud frame interpolation, which synthesizes the intermediate frame 
         <a href="#" onclick="toggleContent('bibc11'); return false;">BibTeX</a>
       </div>
       <div id="absc11" class="hidden-content">
-The sparse LiDAR point clouds become more and more popular in various applications, e.g., the autonomous driving. However, for this type of data, there exists much under-explored space in the corresponding compression framework proposed by MPEG, i.e., geometry-based point cloud compression (G-PCC). In G-PCC, only the distance-based similarity is considered in the intra prediction for the attribute compression. In this paper, we propose a normal-based intra prediction scheme, which provides a more efficient lossless attribute compression by introducing the normals of point clouds. The angle between normals is used to further explore accurate local similarity, which optimizes the selection of predictors. We implement our method into the G-PCC reference software. Experimental results over LiDAR acquired datasets demonstrate that our proposed method is able to deliver better compression performance than the G-PCC anchor, with 2.1% gains on average for lossless attribute coding.
+<strong>Abstract</strong> The sparse LiDAR point clouds become more and more popular in various applications, e.g., the autonomous driving. However, for this type of data, there exists much under-explored space in the corresponding compression framework proposed by MPEG, i.e., geometry-based point cloud compression (G-PCC). In G-PCC, only the distance-based similarity is considered in the intra prediction for the attribute compression. In this paper, we propose a normal-based intra prediction scheme, which provides a more efficient lossless attribute compression by introducing the normals of point clouds. The angle between normals is used to further explore accurate local similarity, which optimizes the selection of predictors. We implement our method into the G-PCC reference software. Experimental results over LiDAR acquired datasets demonstrate that our proposed method is able to deliver better compression performance than the G-PCC anchor, with 2.1% gains on average for lossless attribute coding.
       </div>
       <pre id="bibc11" class="hidden-content">
+@INPROCEEDINGS{9547021,
+  author={Yin, Qian and Ren, Qingshan and Zhao, Lili and Wang, Wenyi and Chen, Jianwen},
+  booktitle={2021 IEEE International Symposium on Broadband Multimedia Systems and Broadcasting (BMSB)}, 
+  title={Lossless Point Cloud Attribute Compression with Normal-based Intra Prediction}, 
+  year={2021},
+  pages={1-5},
+  doi={10.1109/BMSB53066.2021.9547021}
+}
 
       </pre>
     </li>
@@ -659,9 +683,17 @@ The sparse LiDAR point clouds become more and more popular in various applicatio
         <a href="#" onclick="toggleContent('bibc12'); return false;">BibTeX</a>
       </div>
       <div id="absc12" class="hidden-content">
-As an important way of human communication, facial expression not only reflects our mental activities but also provides useful information for human behavior research. Recently, 3D technology becomes promising method to achieve robust facial expression analysis. 3D face scans are robust to lighting and pose variations. In this paper, a novel deep feature fusion convolution neural network (CNN) is designed for 3D facial expression recognition (FER). Each 3D face scan is firstly represented as 2D facial attribute maps (including depth, normal, and shape index values). Then, we combine different of facial attribute maps to learn facial representations by fine-tuning a pre-trained deep feature fusion CNN subnet trained from a large-scale image dataset for universal visual tasks. Moreover, Global Average Pooling is utilized to reduce the number of parameters to decrease the effect of overfitting. The experiments are conducted on the Bosphorus database and the results demonstrate the effectiveness of the proposed method.
+<strong>Abstract</strong> As an important way of human communication, facial expression not only reflects our mental activities but also provides useful information for human behavior research. Recently, 3D technology becomes promising method to achieve robust facial expression analysis. 3D face scans are robust to lighting and pose variations. In this paper, a novel deep feature fusion convolution neural network (CNN) is designed for 3D facial expression recognition (FER). Each 3D face scan is firstly represented as 2D facial attribute maps (including depth, normal, and shape index values). Then, we combine different of facial attribute maps to learn facial representations by fine-tuning a pre-trained deep feature fusion CNN subnet trained from a large-scale image dataset for universal visual tasks. Moreover, Global Average Pooling is utilized to reduce the number of parameters to decrease the effect of overfitting. The experiments are conducted on the Bosphorus database and the results demonstrate the effectiveness of the proposed method.
       </div>
       <pre id="bibc12" class="hidden-content">
+@INPROCEEDINGS{8904930,
+  author={Tian, Kun and Zeng, Liaoyuan and McGrath, Sean and Yin, Qian and Wang, Wenyi},
+  booktitle={2019 30th Irish Signals and Systems Conference (ISSC)}, 
+  title={3D Facial Expression Recognition Using Deep Feature Fusion CNN}, 
+  year={2019},
+  pages={1-6},
+  doi={10.1109/ISSC.2019.8904930}
+}
 
       </pre>
     </li>
